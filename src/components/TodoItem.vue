@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import IconButton from './IconButton.vue';
+import IconButton from '../components/IconButton';
 export default {
     name: 'TodoItem',
     components: {

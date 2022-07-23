@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import IconButton from "@/components/IconButton.vue";
-import NoteCard from "@/components/NoteCard.vue";
+import IconButton from "../components/IconButton.vue";
+import NoteCard from "../components/NoteCard.vue";
 import {create} from 'vue-modal-dialogs';
-import Confirm from '@/components/Confirm.vue';
+import Confirm from '../components/Confirm.vue';
 
 const confirm = create(Confirm, 'title', 'content')
 
@@ -59,7 +59,7 @@ export default {
         this.deleteNote(noteId)
         } 
     }
-  },
+  }
 }
 </script>
 

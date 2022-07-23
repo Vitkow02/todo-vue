@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import IconButton from '@/IconButton';
+import IconButton from '../components/IconButton.vue';
 
 export default {
     name: 'NoteCard',

@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import IconButton from "@/IconButton.vue";
+import IconButton from "../components/IconButton.vue";
 
 export default{
     name: 'Confirm',
