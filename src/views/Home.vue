@@ -26,8 +26,9 @@ import IconButton from "../components/IconButton.vue";
 import NoteCard from "../components/NoteCard.vue";
 import {create} from 'vue-modal-dialogs';
 import Confirm from '../components/Confirm.vue';
+import { NoteService } from "../LocalStorage/NoteService";
 
-const confirm = create(Confirm, 'title', 'content')
+
 
 export default {
   name: "Home",
@@ -63,6 +64,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+div{
+  text-align: center;
+}
 </style>

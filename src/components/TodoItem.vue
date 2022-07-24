@@ -6,7 +6,7 @@
         <div>
             <span
                 :class="{completed: (todo.completed&&todo.text)}"
-                v-if='!editable'
+                v-if="!editable"
                 @click="editable =! editable">
                     {{todo.text ? todo.text : 'Click to edit Todo'}}
             </span>
@@ -20,14 +20,14 @@
 
         <div class="todo-actions">
             <IconButton
-                @action="editable =! editable"
+                @action="editable = !editable"
                 :type="editable ? 'save_alt' : 'edit'"
                 :color="editable ? 'green' : 'orange'"
                 :label="editable ? 'Save' : 'Edit'">
             </IconButton>
             <IconButton
                 color="red"
-                type="delete-forever"
+                type="delete_forever"
                 @action="$emit('remove-todo', todo)"
                 label="Delete">
             </IconButton>
@@ -58,6 +58,51 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+span{
+  word-wrap: none;
+}
+li {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(255, 255, 255, 0.3);;
+  height: 36px;
+  margin: 5px 0px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 5px;
+}
+.completed {
+  text-decoration: line-through;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+input[type="text"] {
+  width: auto;
+  max-width: 180px;
+  height: 25px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: cursive, sans-serif;
+  color: #8a8a8a;
+}
+div{
+  display: flex;
+  justify-content: flex-start;
+}
+.todo-actions{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 375px) {
+  input[type="text"]{
+    max-width: 150px;
+  }
+}
 </style>

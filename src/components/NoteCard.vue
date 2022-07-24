@@ -7,10 +7,10 @@
             </li>
         </ul>
         <div class="note-actions">
-            <IconButton typeof="edit" color="orange" @action="goToNote" label="Edit Note">
+            <IconButton type="edit" color="orange" @action="goToNote" label="Edit Note">
             Edit Note
             </IconButton>
-            <IconButton typeof="delete_outline" color="red" @action="$emit('delete-note', note.noteId)" label="Delete">
+            <IconButton type="delete_outline" color="red" @action="$emit('delete-note', note.noteId)" label="Delete">
             Delete  
             </IconButton>
         </div>
@@ -38,5 +38,12 @@ export default {
 </script>
 
 <style>
-
+.todo-completed{
+  text-decoration: line-through;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.note{
+  text-align: center;
+  
+}
 </style>

@@ -6,24 +6,13 @@
     </nav>
     <hr/>
     <router-view/>
-  </div>
-  <div class="notes" v-for="notes in notes">
-    <div>Название:{{notes.title}}</div>
-    <div>Описание:{{notes.body}}</div>
+    <dialogs-wrapper transition-name="fade"></dialogs-wrapper>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      notes: [
-      ]
-    }
-  },
-  methods: {
-    
-  }
+  name: "App"
 }
 </script>
 
@@ -80,7 +69,21 @@ hr {
     height: 1px;
     background-image: linear-gradient(rgba(141, 86, 128, 0), rgba(143, 129, 129, 0.75));
 }
-
+.green{
+  color: green
+}
+.red{
+  color: red;
+}
+.orange{
+  color: orange;
+}
+.grey{
+  color: grey;
+}
+.black{
+  color: black;
+}
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }

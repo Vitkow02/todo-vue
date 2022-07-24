@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-backdrop" @click="$close(false)">
+    <div class="modal-backdrop" @click="$emit(false)">
         <div class="modal-dialog">
             <span class="material-icon red nd-48">
                 report  
